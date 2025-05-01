@@ -150,3 +150,28 @@
 .button:hover {
 	background-color: #0056b3;
 }
+
+/* Styles for the about page */
+.about-page {
+	padding: 40px;
+}
+
+.about-page h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.about-page section {
+	margin-bottom: 30px;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.about-page p {
+	line-height: 1.7;
+	font-size: 1.1em;
+	color: #333;
+}
