@@ -175,3 +175,65 @@
 	font-size: 1.1em;
 	color: #333;
 }
+
+/* Styles for the portfolio page */
+.portfolio-page {
+	padding: 40px;
+}
+
+.portfolio-page h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(300px, 1fr)
+	); /* Responsive grid for project cards */
+	gap: 30px;
+	margin-top: 20px;
+}
+
+.project-card {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.project-card img {
+	width: 100%;
+	display: block;
+	height: auto;
+}
+
+.project-card h3 {
+	padding: 15px;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.project-card p {
+	padding: 0 15px 15px;
+	line-height: 1.5;
+	text-align: center;
+	color: #555; /* Slightly softer color for the description */
+}
+
+.project-card a {
+	display: block;
+	background-color: #007bff;
+	color: white;
+	text-align: center;
+	padding: 10px 15px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+	background-color: #0056b3;
+}
