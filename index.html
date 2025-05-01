@@ -8,6 +8,19 @@
 	</head>
 	<body>
 		<header class="hero">
+			<nav>
+				<div class="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 			<div class="hero-image"></div>
 			<div class="hero-content">
 				<h1>Denakpo Agba</h1>
@@ -76,5 +89,15 @@
 		<div class="call-to-action">
 			<a href="contact.html" class="button">Get In Touch</a>
 		</div>
+		<script>
+			const navLinks = document.querySelectorAll('nav a');
+			const currentPage = window.location.pathname;
+
+			navLinks.forEach((link) => {
+				if (link.getAttribute('href') === currentPage) {
+					link.classList.add('current-page');
+				}
+			});
+		</script>
 	</body>
 </html>

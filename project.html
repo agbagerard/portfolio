@@ -9,6 +9,11 @@
 	<body>
 		<header>
 			<nav>
+				<div class="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
@@ -25,5 +30,15 @@
 		</footer>
 
 		<script src="project-script.js"></script>
+		<script>
+			const navLinks = document.querySelectorAll('nav a');
+			const currentPage = window.location.pathname;
+
+			navLinks.forEach((link) => {
+				if (link.getAttribute('href') === currentPage) {
+					link.classList.add('current-page');
+				}
+			});
+		</script>
 	</body>
 </html>

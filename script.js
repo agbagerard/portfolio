@@ -1,5 +1,15 @@
 import projectsData from './data.js'; // Assuming data.js is in the same directory
 
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+if (hamburger && navMenu) {
+	hamburger.addEventListener('click', () => {
+		hamburger.classList.toggle('open');
+		navMenu.classList.toggle('active');
+	});
+}
+
 const projectsGrid = document.getElementById('projectsGrid');
 
 if (projectsGrid) {

@@ -9,6 +9,11 @@
 	<body>
 		<header>
 			<nav>
+				<div class="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
@@ -76,5 +81,15 @@
 		<footer>
 			<p>&copy; 2025 Denakpo Agba. All rights reserved.</p>
 		</footer>
+		<script>
+			const navLinks = document.querySelectorAll('nav a');
+			const currentPage = window.location.pathname;
+
+			navLinks.forEach((link) => {
+				if (link.getAttribute('href') === currentPage) {
+					link.classList.add('current-page');
+				}
+			});
+		</script>
 	</body>
 </html>

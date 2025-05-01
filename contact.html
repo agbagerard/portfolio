@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact - Denakpo Agba</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="contact-page">
+			<section class="contact-form">
+				<h2>Get In Touch</h2>
+				<form action="#" method="POST">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+					<div class="form-group">
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" rows="5" required></textarea>
+					</div>
+					<button type="submit" class="button">Send Message</button>
+				</form>
+			</section>
+
+			<section class="contact-info">
+				<h2>Contact Information</h2>
+				<p>
+					Feel free to reach out to me through the form above or via the links
+					below:
+				</p>
+				<ul class="social-links">
+					<li>
+						<a href="#" target="_blank"
+							><i class="fab fa-instagram"></i> Instagram</a
+						>
+					</li>
+					<li>
+						<a href="#" target="_blank"
+							><i class="fab fa-linkedin"></i> LinkedIn</a
+						>
+					</li>
+					<li>
+						<a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+					</li>
+					<li>
+						<a href="#" target="_blank"
+							><i class="fab fa-twitter"></i> X.com (Twitter)</a
+						>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2025 Denakpo Agba. All rights reserved.</p>
+		</footer>
+		<script>
+			const navLinks = document.querySelectorAll('nav a');
+			const currentPage = window.location.pathname;
+
+			navLinks.forEach((link) => {
+				if (link.getAttribute('href') === currentPage) {
+					link.classList.add('current-page');
+				}
+			});
+		</script>
+	</body>
+</html>

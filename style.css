@@ -1,3 +1,39 @@
+/* Styles for the header and navigation */
+header {
+	background-color: #333; /* Dark background for the header */
+	color: white;
+	padding: 15px 20px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center; /* Center the navigation links */
+}
+
+nav ul li {
+	margin: 0 15px;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.1em;
+	transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+	color: #007bff; /* Highlight color on hover */
+}
+
+nav ul li a.current-page {
+	color: #00ffaa; /* A distinct color for the current page */
+	text-decoration: underline;
+}
+
 /* HERO SECTION */
 .hero {
 	display: flex;
@@ -236,4 +272,150 @@
 
 .project-card a:hover {
 	background-color: #0056b3;
+}
+
+/* Styles for the contact page */
+.contact-page {
+	padding: 40px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 40px;
+}
+
+.contact-form,
+.contact-info {
+	padding: 30px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2,
+.contact-info h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #333;
+}
+
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1em;
+}
+
+.form-group textarea {
+	resize: vertical;
+}
+
+.contact-form button[type='submit'] {
+	background-color: #007bff;
+	color: white;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.contact-form button[type='submit']:hover {
+	background-color: #0056b3;
+}
+
+.contact-info p {
+	line-height: 1.6;
+	margin-bottom: 20px;
+	color: #555;
+	text-align: center;
+}
+
+.social-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.social-links li a {
+	color: #007bff;
+	font-size: 1.5em;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+	color: #0056b3;
+}
+
+/* ... Responsive design Mobile ... */
+
+.hamburger {
+	display: none; /* Initially hide the hamburger */
+	cursor: pointer;
+	padding: 10px;
+}
+
+.hamburger div {
+	width: 30px;
+	height: 3px;
+	background-color: white;
+	margin: 5px 0;
+	transition: all 0.3s ease;
+}
+
+/* Media query for smaller screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+	nav ul {
+		display: none; /* Hide the main navigation on smaller screens */
+		flex-direction: column;
+		background-color: #333;
+		position: absolute;
+		top: 60px; /* Adjust based on header height */
+		left: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 10; /* Ensure it's above other content */
+	}
+
+	nav ul.active {
+		display: flex; /* Show the navigation when the 'active' class is present */
+	}
+
+	nav ul li {
+		margin: 15px 0;
+	}
+
+	.hamburger {
+		display: block; /* Show the hamburger menu on smaller screens */
+	}
+
+	/* Optional: Animate the hamburger icon when the menu is open */
+	.hamburger.open div:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.hamburger.open div:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.open div:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
 }
