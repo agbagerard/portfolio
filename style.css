@@ -112,3 +112,20 @@
 .project-card a:hover {
 	background-color: #0056b3;
 }
+
+/* ABOUT ME SECTION */
+.about-me-brief {
+	padding: 40px;
+	text-align: center;
+}
+
+.about-me-brief h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.about-me-brief p {
+	line-height: 1.6;
+	font-size: 1.1em;
+	color: #333;
+}
