@@ -129,3 +129,24 @@
 	font-size: 1.1em;
 	color: #333;
 }
+
+/* GET IN TOUCH */
+.call-to-action {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.button {
+	display: inline-block;
+	background-color: #007bff;
+	color: white;
+	padding: 15px 30px;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover {
+	background-color: #0056b3;
+}
